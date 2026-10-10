@@ -1,0 +1,618 @@
+[
+  {
+    "cityId": "tripoli",
+    "categories": ["cafe", "coffee", "coffee shop", "مقهى", "قهوة"],
+    "rating": 4.6,
+    "reviews": 214,
+    "phone": "+218 91 000 1101",
+    "website": "https://mina-cardamom.example",
+    "latitude": 32.8921,
+    "longitude": 13.1804,
+    "en": {
+      "title": "Mina Cardamom",
+      "type": "Coffee shop",
+      "address": "14 Harbour Lane, Tripoli",
+      "hours": "Open · Closes 11 PM"
+    },
+    "ar": {
+      "title": "هيل الميناء",
+      "type": "مقهى",
+      "address": "14 زقاق الميناء، طرابلس",
+      "hours": "مفتوح · يغلق 11 م"
+    }
+  },
+  {
+    "cityId": "tripoli",
+    "categories": ["pharmacy", "chemist", "drugstore", "صيدلية"],
+    "rating": 4.4,
+    "reviews": 96,
+    "phone": "+218 21 000 1102",
+    "website": "https://zahra-dispensary.example",
+    "latitude": 32.8814,
+    "longitude": 13.1972,
+    "en": {
+      "title": "Zahra Dispensary",
+      "type": "Pharmacy",
+      "address": "8 Flower Street, Tripoli",
+      "hours": "Open · Closes 9 PM"
+    },
+    "ar": {
+      "title": "صيدلية الزهرة",
+      "type": "صيدلية",
+      "address": "8 شارع الزهور، طرابلس",
+      "hours": "مفتوح · يغلق 9 م"
+    }
+  },
+  {
+    "cityId": "tripoli",
+    "categories": ["bakery", "مخبز", "فرن"],
+    "rating": 4.7,
+    "reviews": 163,
+    "phone": "+218 91 000 1103",
+    "website": "https://old-kiln-bakery.example",
+    "latitude": 32.886,
+    "longitude": 13.1768,
+    "en": {
+      "title": "Old Kiln Bakery",
+      "type": "Bakery",
+      "address": "3 Timber Market, Tripoli",
+      "hours": "Open · Closes 6 PM"
+    },
+    "ar": {
+      "title": "مخبز التنور",
+      "type": "مخبز",
+      "address": "3 سوق الحطب، طرابلس",
+      "hours": "مفتوح · يغلق 6 م"
+    }
+  },
+  {
+    "cityId": "tripoli",
+    "categories": ["restaurant", "مطعم"],
+    "rating": 4.5,
+    "reviews": 301,
+    "phone": "+218 91 000 1104",
+    "website": "https://lantern-table.example",
+    "latitude": 32.8948,
+    "longitude": 13.1881,
+    "en": {
+      "title": "Lantern Table",
+      "type": "Restaurant",
+      "address": "21 Sea Corniche, Tripoli",
+      "hours": "Closed · Opens 1 PM"
+    },
+    "ar": {
+      "title": "مائدة الفانوس",
+      "type": "مطعم",
+      "address": "21 كورنيش البحر، طرابلس",
+      "hours": "مغلق · يفتح 1 م"
+    }
+  },
+  {
+    "cityId": "benghazi",
+    "categories": ["cafe", "coffee", "coffee shop", "مقهى", "قهوة"],
+    "rating": 4.3,
+    "reviews": 88,
+    "phone": "+218 61 000 1201",
+    "website": "https://jetty-coffee.example",
+    "latitude": 32.1214,
+    "longitude": 20.0582,
+    "en": {
+      "title": "Jetty Coffee",
+      "type": "Coffee shop",
+      "address": "6 Wharf Road, Benghazi",
+      "hours": "Open · Closes 10 PM"
+    },
+    "ar": {
+      "title": "قهوة الرصيف",
+      "type": "مقهى",
+      "address": "6 طريق الرصيف، بنغازي",
+      "hours": "مفتوح · يغلق 10 م"
+    }
+  },
+  {
+    "cityId": "benghazi",
+    "categories": ["pharmacy", "chemist", "drugstore", "صيدلية"],
+    "rating": 4.8,
+    "reviews": 142,
+    "phone": "+218 61 000 1202",
+    "website": "https://cypress-chemist.example",
+    "latitude": 32.1102,
+    "longitude": 20.0715,
+    "en": {
+      "title": "Cypress Chemist",
+      "type": "Pharmacy",
+      "address": "19 Garden Square, Benghazi",
+      "hours": "Open · Closes 11 PM"
+    },
+    "ar": {
+      "title": "صيدلية السرو",
+      "type": "صيدلية",
+      "address": "19 ساحة الحديقة، بنغازي",
+      "hours": "مفتوح · يغلق 11 م"
+    }
+  },
+  {
+    "cityId": "benghazi",
+    "categories": ["bakery", "مخبز", "فرن"],
+    "rating": 4.2,
+    "reviews": 77,
+    "phone": "+218 61 000 1203",
+    "website": "https://saha-loaf.example",
+    "latitude": 32.1188,
+    "longitude": 20.0794,
+    "en": {
+      "title": "Saha Loaf",
+      "type": "Bakery",
+      "address": "2 Courtyard Street, Benghazi",
+      "hours": "Open · Closes 5 PM"
+    },
+    "ar": {
+      "title": "رغيف الساحة",
+      "type": "مخبز",
+      "address": "2 شارع الساحة، بنغازي",
+      "hours": "مفتوح · يغلق 5 م"
+    }
+  },
+  {
+    "cityId": "benghazi",
+    "categories": ["restaurant", "مطعم"],
+    "rating": 4.6,
+    "reviews": 190,
+    "phone": "+218 61 000 1204",
+    "website": "https://salt-and-thyme.example",
+    "latitude": 32.1246,
+    "longitude": 20.0633,
+    "en": {
+      "title": "Salt & Thyme",
+      "type": "Restaurant",
+      "address": "11 Olive Alley, Benghazi",
+      "hours": "Open · Closes 12 AM"
+    },
+    "ar": {
+      "title": "ملح وزعتر",
+      "type": "مطعم",
+      "address": "11 زقاق الزيتون، بنغازي",
+      "hours": "مفتوح · يغلق 12 ص"
+    }
+  },
+  {
+    "cityId": "cairo",
+    "categories": ["cafe", "coffee", "coffee shop", "مقهى", "قهوة"],
+    "rating": 4.5,
+    "reviews": 540,
+    "phone": "+20 2 000 1301",
+    "website": "https://nile-kettle.example",
+    "latitude": 30.0492,
+    "longitude": 31.2284,
+    "en": {
+      "title": "Nile Kettle",
+      "type": "Coffee shop",
+      "address": "27 River Steps, Cairo",
+      "hours": "Open · Closes 11 PM"
+    },
+    "ar": {
+      "title": "إبريق النيل",
+      "type": "مقهى",
+      "address": "27 درج النهر، القاهرة",
+      "hours": "مفتوح · يغلق 11 م"
+    }
+  },
+  {
+    "cityId": "cairo",
+    "categories": ["pharmacy", "chemist", "drugstore", "صيدلية"],
+    "rating": 4.1,
+    "reviews": 210,
+    "phone": "+20 2 000 1302",
+    "website": "https://ward-pharmacy.example",
+    "latitude": 30.0411,
+    "longitude": 31.2426,
+    "en": {
+      "title": "Ward Pharmacy",
+      "type": "Pharmacy",
+      "address": "5 Rose Passage, Cairo",
+      "hours": "Open · Open 24 hours"
+    },
+    "ar": {
+      "title": "صيدلية الورد",
+      "type": "صيدلية",
+      "address": "5 ممر الورد، القاهرة",
+      "hours": "مفتوح · على مدار الساعة"
+    }
+  },
+  {
+    "cityId": "cairo",
+    "categories": ["bakery", "مخبز", "فرن"],
+    "rating": 4.8,
+    "reviews": 388,
+    "phone": "+20 2 000 1303",
+    "website": "https://alley-oven.example",
+    "latitude": 30.0376,
+    "longitude": 31.2311,
+    "en": {
+      "title": "Alley Oven",
+      "type": "Bakery",
+      "address": "9 Lane of Bread, Cairo",
+      "hours": "Open · Closes 7 PM"
+    },
+    "ar": {
+      "title": "فرن الحارة",
+      "type": "مخبز",
+      "address": "9 حارة الخبز، القاهرة",
+      "hours": "مفتوح · يغلق 7 م"
+    }
+  },
+  {
+    "cityId": "cairo",
+    "categories": ["restaurant", "مطعم"],
+    "rating": 4.4,
+    "reviews": 622,
+    "phone": "+20 2 000 1304",
+    "website": "https://fustat-supper.example",
+    "latitude": 30.0518,
+    "longitude": 31.239,
+    "en": {
+      "title": "Fustat Supper",
+      "type": "Restaurant",
+      "address": "16 Clay Court, Cairo",
+      "hours": "Closed · Opens 12 PM"
+    },
+    "ar": {
+      "title": "عشاء الفسطاط",
+      "type": "مطعم",
+      "address": "16 حوش الفخار، القاهرة",
+      "hours": "مغلق · يفتح 12 م"
+    }
+  },
+  {
+    "cityId": "tunis",
+    "categories": ["cafe", "coffee", "coffee shop", "مقهى", "قهوة"],
+    "rating": 4.7,
+    "reviews": 256,
+    "phone": "+216 71 000 1401",
+    "website": "https://blue-door-coffee.example",
+    "latitude": 36.8012,
+    "longitude": 10.1764,
+    "en": {
+      "title": "Blue Door Coffee",
+      "type": "Coffee shop",
+      "address": "4 Blue Door, Tunis",
+      "hours": "Open · Closes 9 PM"
+    },
+    "ar": {
+      "title": "قهوة الباب الأزرق",
+      "type": "مقهى",
+      "address": "4 الباب الأزرق، تونس",
+      "hours": "مفتوح · يغلق 9 م"
+    }
+  },
+  {
+    "cityId": "tunis",
+    "categories": ["pharmacy", "chemist", "drugstore", "صيدلية"],
+    "rating": 4.3,
+    "reviews": 119,
+    "phone": "+216 71 000 1402",
+    "website": "https://jasmine-chemist.example",
+    "latitude": 36.8108,
+    "longitude": 10.1859,
+    "en": {
+      "title": "Jasmine Chemist",
+      "type": "Pharmacy",
+      "address": "12 Jasmine Walk, Tunis",
+      "hours": "Open · Closes 8 PM"
+    },
+    "ar": {
+      "title": "صيدلية الياسمين",
+      "type": "صيدلية",
+      "address": "12 ممر الياسمين، تونس",
+      "hours": "مفتوح · يغلق 8 م"
+    }
+  },
+  {
+    "cityId": "tunis",
+    "categories": ["bakery", "مخبز", "فرن"],
+    "rating": 4.6,
+    "reviews": 174,
+    "phone": "+216 71 000 1403",
+    "website": "https://medina-flatbread.example",
+    "latitude": 36.7989,
+    "longitude": 10.1702,
+    "en": {
+      "title": "Medina Flatbread",
+      "type": "Bakery",
+      "address": "1 Mill Street, Tunis",
+      "hours": "Open · Closes 4 PM"
+    },
+    "ar": {
+      "title": "خبز المدينة",
+      "type": "مخبز",
+      "address": "1 شارع الطاحونة، تونس",
+      "hours": "مفتوح · يغلق 4 م"
+    }
+  },
+  {
+    "cityId": "tunis",
+    "categories": ["restaurant", "مطعم"],
+    "rating": 4.5,
+    "reviews": 233,
+    "phone": "+216 71 000 1404",
+    "website": "https://kesra-house.example",
+    "latitude": 36.8077,
+    "longitude": 10.1695,
+    "en": {
+      "title": "Kesra House",
+      "type": "Restaurant",
+      "address": "18 Courtyard Gate, Tunis",
+      "hours": "Open · Closes 11 PM"
+    },
+    "ar": {
+      "title": "دار الكسرة",
+      "type": "مطعم",
+      "address": "18 باب الحوش، تونس",
+      "hours": "مفتوح · يغلق 11 م"
+    }
+  },
+  {
+    "cityId": "amman",
+    "categories": ["cafe", "coffee", "coffee shop", "مقهى", "قهوة"],
+    "rating": 4.8,
+    "reviews": 410,
+    "phone": "+962 6 000 1501",
+    "website": "https://stairwell-coffee.example",
+    "latitude": 31.9512,
+    "longitude": 35.9221,
+    "en": {
+      "title": "Stairwell Coffee",
+      "type": "Coffee shop",
+      "address": "7 Stair Street, Amman",
+      "hours": "Open · Closes 10 PM"
+    },
+    "ar": {
+      "title": "قهوة الدرج",
+      "type": "مقهى",
+      "address": "7 شارع الدرج، عمّان",
+      "hours": "مفتوح · يغلق 10 م"
+    }
+  },
+  {
+    "cityId": "amman",
+    "categories": ["pharmacy", "chemist", "drugstore", "صيدلية"],
+    "rating": 4.2,
+    "reviews": 98,
+    "phone": "+962 6 000 1502",
+    "website": "https://night-pharmacy-amman.example",
+    "latitude": 31.9398,
+    "longitude": 35.9334,
+    "en": {
+      "title": "Night Pharmacy",
+      "type": "Pharmacy",
+      "address": "30 Lamp Lane, Amman",
+      "hours": "Open · Open 24 hours"
+    },
+    "ar": {
+      "title": "صيدلية الليل",
+      "type": "صيدلية",
+      "address": "30 زقاق المصباح، عمّان",
+      "hours": "مفتوح · على مدار الساعة"
+    }
+  },
+  {
+    "cityId": "amman",
+    "categories": ["bakery", "مخبز", "فرن"],
+    "rating": 4.4,
+    "reviews": 151,
+    "phone": "+962 6 000 1503",
+    "website": "https://hill-oven.example",
+    "latitude": 31.9486,
+    "longitude": 35.9402,
+    "en": {
+      "title": "Hill Oven",
+      "type": "Bakery",
+      "address": "13 Hill Road, Amman",
+      "hours": "Open · Closes 6 PM"
+    },
+    "ar": {
+      "title": "فرن التل",
+      "type": "مخبز",
+      "address": "13 طريق التل، عمّان",
+      "hours": "مفتوح · يغلق 6 م"
+    }
+  },
+  {
+    "cityId": "amman",
+    "categories": ["restaurant", "مطعم"],
+    "rating": 4.6,
+    "reviews": 275,
+    "phone": "+962 6 000 1504",
+    "website": "https://seven-plates.example",
+    "latitude": 31.9422,
+    "longitude": 35.9196,
+    "en": {
+      "title": "Seven Plates",
+      "type": "Restaurant",
+      "address": "4 Terrace Court, Amman",
+      "hours": "Open · Closes 11 PM"
+    },
+    "ar": {
+      "title": "سبع صحون",
+      "type": "مطعم",
+      "address": "4 حوش الشرفة، عمّان",
+      "hours": "مفتوح · يغلق 11 م"
+    }
+  },
+  {
+    "cityId": "dubai",
+    "categories": ["cafe", "coffee", "coffee shop", "مقهى", "قهوة"],
+    "rating": 4.5,
+    "reviews": 680,
+    "phone": "+971 4 000 1601",
+    "website": "https://creek-cardamom.example",
+    "latitude": 25.2094,
+    "longitude": 55.2641,
+    "en": {
+      "title": "Creek Cardamom",
+      "type": "Coffee shop",
+      "address": "22 Creek Walk, Dubai",
+      "hours": "Open · Closes 12 AM"
+    },
+    "ar": {
+      "title": "هيل الخور",
+      "type": "مقهى",
+      "address": "22 ممشى الخور، دبي",
+      "hours": "مفتوح · يغلق 12 ص"
+    }
+  },
+  {
+    "cityId": "dubai",
+    "categories": ["pharmacy", "chemist", "drugstore", "صيدلية"],
+    "rating": 4.3,
+    "reviews": 204,
+    "phone": "+971 4 000 1602",
+    "website": "https://palm-dispensary.example",
+    "latitude": 25.1986,
+    "longitude": 55.2768,
+    "en": {
+      "title": "Palm Dispensary",
+      "type": "Pharmacy",
+      "address": "8 Palm Arcade, Dubai",
+      "hours": "Open · Closes 10 PM"
+    },
+    "ar": {
+      "title": "صيدلية النخلة",
+      "type": "صيدلية",
+      "address": "8 رواق النخلة، دبي",
+      "hours": "مفتوح · يغلق 10 م"
+    }
+  },
+  {
+    "cityId": "dubai",
+    "categories": ["bakery", "مخبز", "فرن"],
+    "rating": 4.7,
+    "reviews": 329,
+    "phone": "+971 4 000 1603",
+    "website": "https://date-crust.example",
+    "latitude": 25.214,
+    "longitude": 55.2812,
+    "en": {
+      "title": "Date Crust Bakery",
+      "type": "Bakery",
+      "address": "15 Date Lane, Dubai",
+      "hours": "Open · Closes 8 PM"
+    },
+    "ar": {
+      "title": "مخبز قشرة التمر",
+      "type": "مخبز",
+      "address": "15 زقاق التمر، دبي",
+      "hours": "مفتوح · يغلق 8 م"
+    }
+  },
+  {
+    "cityId": "dubai",
+    "categories": ["restaurant", "مطعم"],
+    "rating": 4.4,
+    "reviews": 512,
+    "phone": "+971 4 000 1604",
+    "website": "https://dhow-kitchen.example",
+    "latitude": 25.2015,
+    "longitude": 55.2588,
+    "en": {
+      "title": "Dhow Kitchen",
+      "type": "Restaurant",
+      "address": "3 Wharf Court, Dubai",
+      "hours": "Open · Closes 1 AM"
+    },
+    "ar": {
+      "title": "مطبخ الداو",
+      "type": "مطعم",
+      "address": "3 حوش المرسى، دبي",
+      "hours": "مفتوح · يغلق 1 ص"
+    }
+  },
+  {
+    "cityId": "riyadh",
+    "categories": ["cafe", "coffee", "coffee shop", "مقهى", "قهوة"],
+    "rating": 4.6,
+    "reviews": 447,
+    "phone": "+966 11 000 1701",
+    "website": "https://wadi-pourover.example",
+    "latitude": 24.7188,
+    "longitude": 46.6684,
+    "en": {
+      "title": "Wadi Pour-over",
+      "type": "Coffee shop",
+      "address": "10 Valley Street, Riyadh",
+      "hours": "Open · Closes 11 PM"
+    },
+    "ar": {
+      "title": "قهوة الوادي",
+      "type": "مقهى",
+      "address": "10 شارع الوادي، الرياض",
+      "hours": "مفتوح · يغلق 11 م"
+    }
+  },
+  {
+    "cityId": "riyadh",
+    "categories": ["pharmacy", "chemist", "drugstore", "صيدلية"],
+    "rating": 4.5,
+    "reviews": 186,
+    "phone": "+966 11 000 1702",
+    "website": "https://oasis-chemist.example",
+    "latitude": 24.7062,
+    "longitude": 46.6821,
+    "en": {
+      "title": "Oasis Chemist",
+      "type": "Pharmacy",
+      "address": "26 Oasis Road, Riyadh",
+      "hours": "Open · Closes 12 AM"
+    },
+    "ar": {
+      "title": "صيدلية الواحة",
+      "type": "صيدلية",
+      "address": "26 طريق الواحة، الرياض",
+      "hours": "مفتوح · يغلق 12 ص"
+    }
+  },
+  {
+    "cityId": "riyadh",
+    "categories": ["bakery", "مخبز", "فرن"],
+    "rating": 4.3,
+    "reviews": 139,
+    "phone": "+966 11 000 1703",
+    "website": "https://tamr-and-flour.example",
+    "latitude": 24.7214,
+    "longitude": 46.689,
+    "en": {
+      "title": "Tamr & Flour",
+      "type": "Bakery",
+      "address": "5 Flour Yard, Riyadh",
+      "hours": "Open · Closes 9 PM"
+    },
+    "ar": {
+      "title": "تمر ودقيق",
+      "type": "مخبز",
+      "address": "5 حوش الدقيق، الرياض",
+      "hours": "مفتوح · يغلق 9 م"
+    }
+  },
+  {
+    "cityId": "riyadh",
+    "categories": ["restaurant", "مطعم"],
+    "rating": 4.7,
+    "reviews": 358,
+    "phone": "+966 11 000 1704",
+    "website": "https://najd-table.example",
+    "latitude": 24.7105,
+    "longitude": 46.6712,
+    "en": {
+      "title": "Najd Table",
+      "type": "Restaurant",
+      "address": "14 Palm Court, Riyadh",
+      "hours": "Closed · Opens 1 PM"
+    },
+    "ar": {
+      "title": "مائدة نجد",
+      "type": "مطعم",
+      "address": "14 حوش النخيل، الرياض",
+      "hours": "مغلق · يفتح 1 م"
+    }
+  }
+]
