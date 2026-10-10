@@ -1,0 +1,287 @@
+{
+  "name": "MENA business finder to Google Sheets",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "8a1d5c2e-0b14-4f6a-9c31-6d0e2f7a11b0",
+      "name": "When clicking Test workflow",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "q",
+              "name": "q",
+              "value": "cafe",
+              "type": "string"
+            },
+            {
+              "id": "ll",
+              "name": "ll",
+              "value": "@32.8872,13.1913,13z",
+              "type": "string"
+            },
+            {
+              "id": "hl",
+              "name": "hl",
+              "value": "en",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b7e2a941-55c0-4d18-8f66-1c4a9e0d22aa",
+      "name": "Search inputs",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        280,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "search",
+        "operation": "google_maps",
+        "q": "={{ $json.q }}",
+        "type": "search",
+        "ll": "={{ $json.ll }}",
+        "additionalFields": {
+          "hl": "={{ $json.hl }}"
+        }
+      },
+      "id": "c3f08d77-1e44-4a90-b512-90ab66e4d318",
+      "name": "SerpApi Google Maps",
+      "type": "n8n-nodes-serpapi.serpApi",
+      "typeVersion": 1,
+      "position": [
+        580,
+        0
+      ],
+      "credentials": {
+        "serpApi": {
+          "name": "SerpApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "language": "javaScript",
+        "jsCode": "const response = $input.first().json;\nconst places = Array.isArray(response.local_results) ? response.local_results : [];\n\nfunction text(value) {\n  return typeof value === \"string\" ? value.trim() : \"\";\n}\n\nfunction numberOrBlank(value) {\n  if (typeof value === \"number\" && Number.isFinite(value)) return value;\n  if (typeof value === \"string\" && value.trim() !== \"\" && Number.isFinite(Number(value))) {\n    return Number(value);\n  }\n  return \"\";\n}\n\nfunction hoursOf(place) {\n  const hours = text(place.hours);\n  if (hours) return hours;\n  const openState = text(place.open_state);\n  if (openState) return openState;\n  if (place.operating_hours && typeof place.operating_hours === \"object\") {\n    return Object.entries(place.operating_hours)\n      .filter((entry) => typeof entry[1] === \"string\" && entry[1].trim())\n      .map(([day, value]) => day + \": \" + value.trim())\n      .join(\"; \");\n  }\n  return \"\";\n}\n\nfunction linkOf(place) {\n  const website = text(place.website);\n  if (website) return website;\n  const gps = place.gps_coordinates || {};\n  if (typeof gps.latitude === \"number\" && typeof gps.longitude === \"number\") {\n    return \"https://www.google.com/maps/search/?api=1&query=\" + gps.latitude + \",\" + gps.longitude;\n  }\n  return \"\";\n}\n\nreturn places\n  .filter((place) => place && text(place.title))\n  .map((place) => ({\n    json: {\n      name: text(place.title),\n      rating: numberOrBlank(place.rating),\n      reviews: numberOrBlank(place.reviews),\n      type: text(place.type),\n      address: text(place.address),\n      phone: text(place.phone),\n      hours: hoursOf(place),\n      link: linkOf(place),\n    },\n  }));\n"
+      },
+      "id": "d94e11ab-6c27-4e55-9a08-77f2b0c85e61",
+      "name": "Normalise listings",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "sheet",
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_SPREADSHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Businesses",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "name": "={{ $json.name }}",
+            "rating": "={{ $json.rating }}",
+            "reviews": "={{ $json.reviews }}",
+            "type": "={{ $json.type }}",
+            "address": "={{ $json.address }}",
+            "phone": "={{ $json.phone }}",
+            "hours": "={{ $json.hours }}",
+            "link": "={{ $json.link }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "rating",
+              "displayName": "rating",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "reviews",
+              "displayName": "reviews",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "type",
+              "displayName": "type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "address",
+              "displayName": "address",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "phone",
+              "displayName": "phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "hours",
+              "displayName": "hours",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "link",
+              "displayName": "link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e15b70c4-88a2-4f13-bc90-2d6a41f09c77",
+      "name": "Append to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1180,
+        0
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Same search as the Mahalla app\n\n1. Install the community node `n8n-nodes-serpapi`.\n2. Set `q` (business type), `ll` (`@lat,lng,zoom`), and `hl` (`en` or `ar`).\n3. Attach a SerpApi credential and a Google Sheets credential.\n4. Replace `YOUR_SPREADSHEET_ID` and use a tab named Businesses.\n\nCity coordinates:\n- Tripoli `@32.8872,13.1913,13z`\n- Benghazi `@32.1167,20.0667,13z`\n- Cairo `@30.0444,31.2357,12z`\n- Tunis `@36.8065,10.1815,13z`\n- Amman `@31.9454,35.9284,13z`\n- Dubai `@25.2048,55.2708,12z`\n- Riyadh `@24.7136,46.6753,12z`",
+        "height": 360,
+        "width": 460
+      },
+      "id": "f20c88de-39b1-4d6e-a774-55e1c0ab9024",
+      "name": "How to run",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        220
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking Test workflow": {
+      "main": [
+        [
+          {
+            "node": "Search inputs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search inputs": {
+      "main": [
+        [
+          {
+            "node": "SerpApi Google Maps",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SerpApi Google Maps": {
+      "main": [
+        [
+          {
+            "node": "Normalise listings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalise listings": {
+      "main": [
+        [
+          {
+            "node": "Append to Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false
+  },
+  "tags": []
+}

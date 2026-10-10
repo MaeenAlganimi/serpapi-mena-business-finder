@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-ibm), "Segoe UI", tahoma, sans-serif;
+  --color-paper: #f3efe6;
+  --color-ink: #1c1915;
+  --color-muted: #5e564c;
+  --color-palm: #0c6b52;
+  --color-palm-dark: #084c3b;
+  --color-sand: #e7dcc8;
+  --color-card: #fffdf8;
+  --color-line: #d9d0c1;
+  --color-saffron: #9a5b10;
+}
+
+body {
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(circle at top right, rgb(12 107 82 / 8%), transparent 28rem),
+    var(--color-paper);
+}
