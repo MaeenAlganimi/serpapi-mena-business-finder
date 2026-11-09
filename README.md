@@ -54,6 +54,10 @@ See [n8n/README.md](n8n/README.md). Import `n8n/mena-business-finder.json` after
 - `npm test` — Vitest
 - `npm run build` — production build
 
+## AI-assisted development
+
+This project was built with AI-assisted development: code, tests, and documentation were drafted with an AI assistant, then checked by running lint, typecheck, tests, and build. Nothing in this project should be read as production-audited.
+
 ## License
 
 MIT. Copyright 2026 Maeen Alganimi.
